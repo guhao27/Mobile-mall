@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+        <meta http-equiv="Cache-Control" CONTENT="no-cache">
+        <meta http-equiv="Pragma" CONTENT="no-cache">
+        <title>订单配送信息</title>
+        <script type="text/javascript" src="js/flexible.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    </head>
+    <body>
+        <div class="page-group">
+            <div class="page">
+                <header class="bar head-bar">
+                    <div class="lf btn back-btn">
+                        <i class="icon icon-yueyueaiicon_fanhuijiantou"></i>
+                    </div>
+                    <div class="head-title center">
+                        订单配送信息
+                    </div>
+                </header>
+                <div class="content pt20" id="scroll-box">
+
+                    <ul class="mb20 order-product-list">
+                        <li>
+                            <div class="img">
+                                <img class="img-center" src="images/px.png" data-src="images/product130.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h2 class="txt-line2 product-name">欧咔全透气卫生巾纯棉无荧光剂夜用组合全欧咔全透气卫生巾纯棉无荧光剂夜用组合全</h2>
+                            </div>
+                            <div class="count-box">
+                                <div class="price txt-hidden">
+                                    &yen;:29.00
+                                </div>
+                                <div class="count txt-hidden">
+                                    ×3
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="order-remarks mb20">
+                        <p class="txt-hidden">订单号：2156323265212212</p>
+                        <p class="txt-hidden">创建时间：2017-01-06 12:20:30</p>
+                        <div class="line clearfix">
+                            <div class="lf txt-hidden maxW50">
+                                配送员：水星人水星人水星人水星人水星人
+                            </div>
+                            <div class="rf">
+                                联系方式：18279879631
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="total-line clearfix">
+                        <div class="lf">
+                            运费
+                        </div>
+                        <div class="rf">
+                            <span>&yen;0.00</span>
+                        </div>
+                    </div>
+                    <div class="total-line clearfix">
+                        <div class="lf">
+                            代金券优惠
+                        </div>
+                        <div class="rf">
+                            <span>-&yen;40.00</span>
+                        </div>
+                    </div>
+                    <div class="total-line clearfix mb20">
+                        <div class="lf">
+                            实付款
+                        </div>
+                        <div class="rf">
+                            <span>&yen;22.70</span>
+                        </div>
+                    </div>
+
+                    <div class="schedule">
+                        <ul class="schedule-list">
+                            <li>
+                                <div class="date">
+                                    2017-02-01  13:50:00
+                                </div>
+                                <div class="schedule-step">
+                                    提交订单
+                                </div>
+                                <div class="step"></div>
+                            </li>
+                            <li>
+                                <div class="date">
+                                    2017-02-01  13:50:00
+                                </div>
+                                <div class="schedule-step">
+                                    支付成功
+                                </div>
+                                <div class="step onStep"></div>
+                            </li>
+                            <li>
+                                <div class="date">
+                                    2017-02-01  13:50:00
+                                </div>
+                                <div class="schedule-step">
+                                    配送中
+                                </div>
+                                <div class="step onStep"></div>
+                            </li>
+                            <li>
+                                <!-- <div class="date">
+                                    2017-02-01  13:50:00
+                                </div> -->
+                                <div class="schedule-step">
+                                    确认收货
+                                </div>
+                                <div class="step"></div>
+                                <!-- onStep到这一步，自动变为蓝色激活按钮 -->
+                                <div class="confirm-btn">
+                                    确认收货
+                                </div>
+                            </li>
+                            <li>
+                                <!-- <div class="date">
+                                    2017-02-01  13:50:00
+                                </div> -->
+                                <div class="schedule-step">
+                                    完成
+                                </div>
+                                <div class="step"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="map-box" id="allmap">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/lazyloadImg.min.js"></script>
+<script>
+    $(function(){
+
+        new LazyloadImg({
+            el: '[data-src]', //匹配元素,可在前面添加类名或者id名
+            top: 50, //元素在顶部伸出长度触发加载机制
+            right: 50, //元素在右边伸出长度触发加载机制
+            bottom: 50, //元素在底部伸出长度触发加载机制
+            left: 50, //元素在左边伸出长度触发加载机制
+            qriginal: false, // true，自动将图片剪切成默认图片的宽高；false显示图片真实宽高
+            load: function (el) { //图片加载成功后执行的回调方法，传入一个参数
+                el.style.cssText += '-webkit-animation: fadeIn 01s ease 0.2s 1 both;animation: fadeIn 1s ease 0.2s 1 both;';
+            },
+            error: function (el) { //图片加载失败后执行的回调方法
+
+            }
+        });
+    })
+</script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(113.375519,23.103983);
+    map.centerAndZoom(point,20);
+
+    var geolocation = new BMap.Geolocation();
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);               // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+            console.log('您的位置：'+r.point.lng+','+r.point.lat);
+        }
+        else {
+            console.log('failed'+this.getStatus());
+        }        
+    },{enableHighAccuracy: true})
+    //关于状态码
+    //BMAP_STATUS_SUCCESS   检索成功。对应数值“0”。
+    //BMAP_STATUS_CITY_LIST 城市列表。对应数值“1”。
+    //BMAP_STATUS_UNKNOWN_LOCATION  位置结果未知。对应数值“2”。
+    //BMAP_STATUS_UNKNOWN_ROUTE 导航结果未知。对应数值“3”。
+    //BMAP_STATUS_INVALID_KEY   非法密钥。对应数值“4”。
+    //BMAP_STATUS_INVALID_REQUEST   非法请求。对应数值“5”。
+    //BMAP_STATUS_PERMISSION_DENIED 没有权限。对应数值“6”。(自 1.1 新增)
+    //BMAP_STATUS_SERVICE_UNAVAILABLE   服务不可用。对应数值“7”。(自 1.1 新增)
+    //BMAP_STATUS_TIMEOUT   超时。对应数值“8”。(自 1.1 新增)
+</script>

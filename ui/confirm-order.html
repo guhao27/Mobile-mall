@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+        <meta http-equiv="Cache-Control" CONTENT="no-cache">
+        <meta http-equiv="Pragma" CONTENT="no-cache">
+        <title>确认订单</title>
+        <script type="text/javascript" src="js/flexible.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    </head>
+    <body>
+        <div class="page-group">
+            <div class="page">
+                <header class="bar head-bar">
+                    <div class="lf btn back-btn">
+                        <i class="icon icon-yueyueaiicon_fanhuijiantou"></i>
+                    </div>
+                    <div class="head-title center">
+                        确认订单
+                    </div>
+                </header>
+                <footer class="bar footer-bar clearfix">
+                    <div class="footer-total lf txt-hidden">
+                        合计：<span class="money">87.00</span>
+                    </div>
+                    <!-- 点击弹出配送员列表 -->
+                    <div class="footer-put-order cli-main lf">
+                        提交订单
+                    </div>
+                </footer>
+                <div class="content pt20" id="scroll-box">
+                    <div class="order-addr mb20">
+                        <div class="order-user clearfix">
+                            <div class="lf name txt-hidden">
+                                收货人：李小姐
+                            </div>
+                            <div class="rf phone">
+                                1397683456
+                            </div>
+                            <i class="icon icon-yueyueaiicon_dizhi"></i>
+                        </div>
+                        <div class="addr-txt">
+                            <span>广东省广州市海珠区新港东路1668号北塔6楼广东省广州市</span>
+                            <i class="icon icon-yueyueaiicon_jiantou"></i>
+                        </div>
+                    </div>
+
+                    <ul class="mb20 order-product-list">
+                        <li>
+                            <div class="img">
+                                <img class="img-center" src="images/px.png" data-src="images/product130.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h2 class="txt-line2 product-name">欧咔全透气卫生巾纯棉无荧光剂夜用组合全欧咔全透气卫生巾纯棉无荧光剂夜用组合全</h2>
+                            </div>
+                            <div class="count-box">
+                                <div class="price txt-hidden">
+                                    &yen;:29.00
+                                </div>
+                                <div class="count txt-hidden">
+                                    ×3
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="count-ctrl-line clearfix">
+                        <div class="lf">
+                            购买数量
+                        </div>
+                        <div class="ctrl-box rf">
+                            <span class="btn jian"></span>
+                            <input class="count" type="number" name="count" value="3" min="0">
+                            <span class="btn jia"></span>
+                        </div>
+                    </div>
+
+                    <div class="select-link-line clearfix mb20">
+                        <div class="lf">
+                            使用代金券
+                        </div>
+                        <div class="rf">
+                            <span></span>
+                            <i class="icon icon-yueyueaiicon_jiantou"></i>
+                        </div>
+                    </div>
+
+                    <div class="select-link-line clearfix">
+                        <div class="lf">
+                            支付方式
+                        </div>
+                        <div class="rf" data-layer="layer-pay">
+                            <span class="payType-txt">支付宝</span>
+                            <i class="icon icon-yueyueaiicon_jiantou"></i>
+                        </div>
+                    </div>
+
+                    <div class="total-line clearfix">
+                        <div class="rf">
+                            <span>小计：</span>
+                            <span class="total-val">&yen;62.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-bg"></div>
+                <div class="slide-main">
+                    <div class="slide-title clearfix">
+                        <div class="title-txt lf">
+                            配送员列表
+                        </div>
+                        <div class="slide-tips rf">
+                            请在3分钟内选择
+                        </div>
+                    </div>
+                    <ul class="dispatch-list">
+                        <li>
+                            <div class="dispatch-item">
+                                <div class="img">
+                                    <img class="img-center" src="images/head.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="dispatch-name">
+                                        <span class="name">李八巴</span>
+                                        <span class="phone">13913242332</span>
+                                    </div>
+                                    <div class="store-status clearfix">
+                                        <div class="store lf">
+                                            库存：10
+                                        </div>
+                                        <div class="status rf">
+                                            已上班
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dispatch-addr txt-hidden">
+                                地址：中州中心北塔6楼
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dispatch-item">
+                                <div class="img">
+                                    <img class="img-center" src="images/head.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <div class="dispatch-name">
+                                        <span class="name">李八巴</span>
+                                        <span class="phone">13913242332</span>
+                                    </div>
+                                    <div class="store-status clearfix">
+                                        <div class="store lf">
+                                            库存：10
+                                        </div>
+                                        <div class="status rf">
+                                            已上班
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dispatch-addr txt-hidden">
+                                地址：中州中心北塔6楼
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="footer-link-line cli-main" href="##" title="">附近的配送员</a>
+                </div>
+            </div>
+
+            <!-- layer放在最下方 -->
+            <div class="layer">
+                <div class="layer-bg"></div>
+                <!-- 选择支付方式 -->
+                <div class="layer-widow layer-pay">
+                    <div class="layer-main">
+                        <ul class="payType-list">
+                            <li class="zfb">
+                                <i class="icon icon-yueyueaiicon_zhifubao1"></i>
+                                <span class="pay">支付宝支付</span>
+                            </li>
+                            <li class="wx">
+                                <i class="icon icon-yueyueaiicon_zhifuweixin1"></i>
+                                <span class="pay">微信支付</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 提示语弹框 -->
+                <div class="layer-widow layer-tips">
+                    <div class="layer-main">
+                        <div class="layer-tips-main txt-hidden">
+                        </div>
+                        <div class="lf true-layer txt-hidden">
+                        </div>
+                        <div class="lf false-layer txt-hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/lazyloadImg.min.js"></script>
+<script>
+    $(function(){
+
+        new LazyloadImg({
+            el: '[data-src]', //匹配元素,可在前面添加类名或者id名
+            top: 50, //元素在顶部伸出长度触发加载机制
+            right: 50, //元素在右边伸出长度触发加载机制
+            bottom: 50, //元素在底部伸出长度触发加载机制
+            left: 50, //元素在左边伸出长度触发加载机制
+            qriginal: false, // true，自动将图片剪切成默认图片的宽高；false显示图片真实宽高
+            load: function (el) { //图片加载成功后执行的回调方法，传入一个参数
+                el.style.cssText += '-webkit-animation: fadeIn 01s ease 0.2s 1 both;animation: fadeIn 1s ease 0.2s 1 both;';
+            },
+            error: function (el) { //图片加载失败后执行的回调方法
+
+            }
+        });
+    })
+</script>

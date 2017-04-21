@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+        <meta http-equiv="Cache-Control" CONTENT="no-cache">
+        <meta http-equiv="Pragma" CONTENT="no-cache">
+        <title>代金券详情</title>
+        <script type="text/javascript" src="js/flexible.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    </head>
+    <body>
+        <div class="page-group">
+            <div class="page">
+                <header class="bar head-bar">
+                    <div class="lf btn back-btn">
+                        <i class="icon icon-yueyueaiicon_fanhuijiantou"></i>
+                    </div>
+                    <div class="head-title center">
+                        代金券详情
+                    </div>
+                </header>
+                <div class="content" id="scroll-box">
+                    <div class="coupon-detail">
+                        <div class="coupon-car">
+                            <div class="car-title">
+                                推荐奖励
+                            </div>
+                            <div class="car-main">
+                                <div class="car-val">
+                                    <span>&yen;</span>
+                                    <span class="val">20</span>
+                                </div>
+                            </div>
+                            <div class="car-btn">
+                                立即使用
+                            </div>
+                            <ul class="tips-list">
+                                <li>使用条件：无最低消费、全场可用、可叠加使用</li>
+                                <li>可用时间：2017-02-05至2017-09-05</li>
+                            </ul>
+                        </div>
+
+                        <div class="coupon-car coupon-remerk">
+                            <div class="car-title">
+                                代金券规则:
+                            </div>
+                            <ul class="tips-list">
+                                <li>a：代金券仅限抵用xxxx部分的费用。</li>
+                                <li>b：此代金券不兑现金、不开发票。</li>
+                                <li>c：没张代金券面额为x元，每xxx仅限。</li>
+                                <li>d：代金券使用有效期从注册日起。</li>
+                                <li>e：xxxx有限公司保留最终解释权。</li>
+                            </ul>
+                        </div>
+
+                        <ul class="mb20 radius10 order-product-list">
+                            <li class="">
+                                <div class="img">
+                                    <img class="img-center" src="images/px.png" data-src="images/product130.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <h2 class="txt-line2 product-name">欧咔全透气卫生巾纯棉无荧光剂夜用组合全欧咔全透气卫生巾纯棉无荧光剂夜用组合全</h2>
+                                    <div class="date-txt">
+                                        2017-2-15  12:00:01
+                                    </div>
+                                </div>
+                                <div class="count-box pt40">
+                                    <div class="price txt-hidden">
+                                        -
+                                        &yen;:29.00
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/lazyloadImg.min.js"></script>
+<script>
+    $(function(){
+
+        new LazyloadImg({
+            el: '[data-src]', //匹配元素,可在前面添加类名或者id名
+            top: 50, //元素在顶部伸出长度触发加载机制
+            right: 50, //元素在右边伸出长度触发加载机制
+            bottom: 50, //元素在底部伸出长度触发加载机制
+            left: 50, //元素在左边伸出长度触发加载机制
+            qriginal: false, // true，自动将图片剪切成默认图片的宽高；false显示图片真实宽高
+            load: function (el) { //图片加载成功后执行的回调方法，传入一个参数
+                el.style.cssText += '-webkit-animation: fadeIn 01s ease 0.2s 1 both;animation: fadeIn 1s ease 0.2s 1 both;';
+            },
+            error: function (el) { //图片加载失败后执行的回调方法
+
+            }
+        });
+    })
+</script>
